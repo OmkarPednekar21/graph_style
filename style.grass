@@ -1,0 +1,54 @@
+node {
+  diameter: 50px;
+  color: #A5ABB6;
+  border-color: #9AA1AC;
+  border-width: 2px;
+  text-color-internal: #FFFFFF;
+  font-size: 10px;
+  caption: "<id>";
+}
+relationship {
+  color: #A5ABB6;
+  shaft-width: 1px;
+  font-size: 8px;
+  padding: 3px;
+  text-color-external: #000000;
+  text-color-internal: #FFFFFF;
+  caption: "<type>";
+}
+node.NetworkInterface {
+  color: #FFC454;
+  border-color: #d7a013;
+  text-color-internal: #2A2C34;
+  defaultCaption: "<id>";
+  caption: "{short_label}";
+}
+node.NetworkInterface[operationalStatus="UP"] {
+  color: #4CAF50;        /* green */
+  border-color: #2E7D32;
+}
+
+node.NetworkInterface[operationalStatus="DOWN"] {
+  color: #E53935;        /* red */
+  border-color: #B71C1C;
+}
+node.NetworkElement {
+  color: #DA7194;
+  border-color: #cc3c6c;
+  text-color-internal: #FFFFFF;
+  caption: "{device_name}";
+  diameter: 80px;
+}
+node.LogicalInterface {
+  color: #57C7E3;
+  border-color: #23b3d7;
+  text-color-internal: #2A2C34;
+  caption: "{short_label}";
+}
+node.Link {
+  color: #F16667;
+  border-color: #eb2728;
+  text-color-internal: #FFFFFF;
+  defaultCaption: "<id>";
+  caption: "{name}";
+}
